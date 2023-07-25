@@ -59,6 +59,9 @@ button {
   color: inherit;
   text-decoration: none;
   font-style: normal;
+  transition-property: color;
+  transition-duration: var(--timing-duration);
+  transition-timing-function: var(--timing-function);
 }
 
 .link:hover,
@@ -127,13 +130,28 @@ header {
 
 .header-list-link {
   /*  Почему бы не задать ul text align center а li не задать height 100% */
+  position: relative;
   display: inline-block;
   padding: 24px 0;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: var(--navy-blue);
+  /* color: var(--navy-blue); */
+  color: var(--ocean);
+  transition: color var(--timing-duration) var(--timing-function);
+}
+
+.header-list-link::after {
+  position: absolute;
+  transform: translate(-50% -50%);
+  bottom: -1px;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--ocean);
 }
 
 .header-address-contact {
@@ -589,7 +607,8 @@ address {
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
-.gallary-link:hover .gallary-wrapper-text {
+.gallary-link:hover .gallary-wrapper-text,
+.gallary-link:focus .gallary-wrapper-text {
   transform: translateY(0%);
 }
 
