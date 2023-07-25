@@ -541,7 +541,9 @@ address {
   background-color: var(--cornflower);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
-  transition: background-color var(--timing-duration) var(--timing-function);
+  transition-property: background-color, border;
+  transition-duration: var(--timing-duration);
+  transition-timing-function: var(--timing-function);
 }
 
 .close-button-svg {
@@ -558,6 +560,7 @@ address {
 .close-button:hover,
 .close-button:focus {
   background-color: var(--ocean);
+  border: none;
 }
 /* ======================= PORTFOLIO ================== */
 
