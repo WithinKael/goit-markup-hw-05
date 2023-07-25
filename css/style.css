@@ -533,25 +533,30 @@ address {
 .portfolio-filter-btn {
   border-radius: 4px;
   padding: 12px 24px;
-  border: 1px solid var(--cornflower);
+  /* border: 1px solid var(--cornflower); */
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--cornflower);
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.04em;
   color: var(--iris);
   background-color: var(--cloud);
-  transition-property: color, box-shadow, background-color;
+  transition-property: color, box-shadow, background-color, border-color;
   transition-duration: var(--timing-duration);
   transition-timing-function: var(--timing-function);
 }
 
 .portfolio-filter-btn:hover {
+  border-color: var(--ocean);
   color: var(--white);
   background-color: var(--ocean);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .portfolio-filter-btn:focus {
+  border-color: var(--ocean);
   color: var(--white);
   background-color: var(--ocean);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
@@ -585,7 +590,7 @@ address {
 }
 
 .gallary-link:hover .gallary-wrapper-text {
-  transform: translateY(0);
+  transform: translateY(0%);
 }
 
 .gallary-wrapper-overlay {
