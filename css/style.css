@@ -82,6 +82,12 @@ button {
   overflow: hidden;
 }
 
+.container {
+  max-width: 1158px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
 .section {
   padding: 120px 0;
 }
@@ -91,12 +97,6 @@ header {
   border-bottom: 1px solid var(--cornflower);
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
-}
-
-.container {
-  max-width: 1158px;
-  margin: 0 auto;
-  padding: 0 15px;
 }
 
 .header-container {
@@ -129,20 +129,22 @@ header {
 }
 
 .header-list-link {
-  /*  Почему бы не задать ul text align center а li не задать height 100% */
-  position: relative;
   display: inline-block;
   padding: 24px 0;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  /* color: var(--navy-blue); */
-  color: var(--ocean);
+  color: var(--navy-blue);
   transition: color var(--timing-duration) var(--timing-function);
 }
 
-.header-list-link::after {
+.header-list-link.active {
+  position: relative;
+  color: var(--ocean);
+}
+
+.header-list-link.active::after {
   position: absolute;
   transform: translate(-50% -50%);
   bottom: -1px;
